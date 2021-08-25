@@ -13,14 +13,13 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        background: resolve(__dirname, "src", "background.ts"),
       },
       output: {
         entryFileNames: `assets/[name].js`,
         chunkFileNames: `assets/[name].js`,
         // Doesn't currently work, see https://github.com/vitejs/vite/issues/2944
-        assetFileNames: `assets/[name].[ext]`
-      }
+        assetFileNames: `assets/[name].[ext]`,
+      },
     },
   },
   plugins: [svelte()],
