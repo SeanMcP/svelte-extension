@@ -6,6 +6,7 @@
   import Home from "./pages/Home.svelte";
   import Another from "./pages/Another.svelte";
   import PopupButton from "./components/PopupButton.svelte";
+  import { BASE_PATH } from "./constants";
 
   onMount(async () => {
     const result = await browser.storage.local.get();
@@ -13,9 +14,9 @@
   });
 </script>
 
-<Router basepath="/dist/index.html">
+<Router basepath={BASE_PATH}>
   <nav>
-    <Link to="/">Home</Link>
+    <Link to={`${BASE_PATH}?back=true`}>Home</Link>
     <Link to="another">Another</Link>
     {#if !window.location.search.includes("popup=true")}
       <PopupButton />
