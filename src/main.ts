@@ -1,5 +1,5 @@
-import App from "./App.svelte";
 import browser from "webextension-polyfill";
+import App from "./App.svelte";
 
 async function initialize() {
   console.log("SVEX up and running!");

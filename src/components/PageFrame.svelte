@@ -1,7 +1,7 @@
 <script lang="ts">
   import { navigate } from "svelte-routing";
-
   import browser from "webextension-polyfill";
+
   import { BASE_PATH } from "../constants";
 
   const pathname = window.location.pathname.slice(BASE_PATH.length);

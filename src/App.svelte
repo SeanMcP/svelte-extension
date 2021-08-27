@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { Router, Route, Link } from "svelte-routing";
   import { onMount } from "svelte";
+  import { Router, Route, Link } from "svelte-routing";
   import browser from "webextension-polyfill";
 
   import Home from "./pages/Home.svelte";
   import Another from "./pages/Another.svelte";
   import PopupButton from "./components/PopupButton.svelte";
-  import { BASE_PATH } from "./constants";
+  import { BASE_PATH, ROUTES } from "./constants";
 
   onMount(async () => {
     const result = await browser.storage.local.get();
@@ -16,12 +16,12 @@
 
 <Router basepath={BASE_PATH}>
   <nav>
-    <Link to={`${BASE_PATH}?back=true`}>Home</Link>
-    <Link to="another">Another</Link>
+    <Link to={ROUTES.TO_HOME}>Home</Link>
+    <Link to={ROUTES.ANOTHER}>Another</Link>
     {#if !window.location.search.includes("popup=true")}
       <PopupButton />
     {/if}
   </nav>
-  <Route path="another"><Another /></Route>
-  <Route path="/"><Home /></Route>
+  <Route path={ROUTES.ANOTHER}><Another /></Route>
+  <Route path={ROUTES.HOME}><Home /></Route>
 </Router>
