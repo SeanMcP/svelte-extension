@@ -15,7 +15,7 @@
 </script>
 
 <Router basepath={BASE_PATH}>
-  <div>
+  <div class="app">
     <nav>
       <Link to={ROUTES.TO_HOME}>Home</Link>
       <Link to={ROUTES.ANOTHER}>Another</Link>
@@ -29,12 +29,8 @@
 </Router>
 
 <style>
-  div {
+  .app {
     display: grid;
     grid-template-rows: 20px auto;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    height: 400px;
-    width: 400px;
   }
 </style>

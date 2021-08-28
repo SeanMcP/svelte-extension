@@ -1,5 +1,6 @@
 import browser from "webextension-polyfill";
 import App from "./App.svelte";
+import "./assets/global.css";
 
 async function initialize() {
   console.log("SVEX up and running!");
