@@ -12,6 +12,6 @@ A browser-extension template powered by Svelte
 ## Technologies
 
 - [Svelte](https://svelte.dev): Performant and reactive framework
-- TypeScript: A strongly-typed superset of JavaScript
+- [TypeScript](https://www.typescriptlang.org/): A strongly-typed superset of JavaScript
 - [Vite](https://vitejs.dev): Resource bundling and fast builds
 - [webextension-polyfill](https://github.com/mozilla/webextension-polyfill): A lightweight WebExtension API polyfill for Chrome
