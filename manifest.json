@@ -12,7 +12,7 @@
       "32": "dist/icon-32.png",
       "48": "dist/icon-48.png",
       "128": "dist/icon-128.png"
-  }
+    }
   },
   "manifest_version": 2
 }
