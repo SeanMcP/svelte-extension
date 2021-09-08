@@ -28,6 +28,10 @@ For examples of using the WebExtension API and `browser`, see:
 - `src/main.ts > initialize`
 - `src/utils.ts > checkHistory`
 
+## Additional information
+
+There are two `manifest.json` files in this project to give you the choice of which `manifest_version` that you want to use for your extension. As of September 2021, Chrome/Chromium-powered browsers support manifest v3 but Firefox does not. I have set the default to v2 to promote cross-browser extensions, but I will change that to v3 once Firefox adds support. That could be [as early as early 2022](https://blog.mozilla.org/addons/2021/05/27/manifest-v3-update/).
+
 ## License
 
 Copyright &copy; 2021 [Sean McPherson](https://seanmcp.com)
